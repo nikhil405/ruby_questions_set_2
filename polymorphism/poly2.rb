@@ -20,3 +20,31 @@
   # 4
   # I am car, I have 4
   #  wheels
+class Vehicle
+
+def wheel
+  @wheel
+end
+  
+end
+class Bike < Vehicle
+  def show
+  puts "enter number of wheels"
+  @wheel=gets.chomp
+  puts "I am bike, I have #{@wheel} wheels"
+  end
+end
+class Car < Vehicle
+  def put 
+    puts "Enter number of wheels"
+    @whell=gets.chomp
+    puts  "I am car, I have #{{@wheel}} wheels"
+  end
+end
+# end
+#   class Car
+#   end
+b=Bike.new
+b.show
+c=Car.new
+c.put

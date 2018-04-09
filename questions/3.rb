@@ -17,3 +17,7 @@
 #        Or
 # File not found
 
+# aFile = File.new("input.txt")
+puts "enter filname"
+aFile=gets.to_s
+p aFile.open()
