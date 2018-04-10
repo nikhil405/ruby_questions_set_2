@@ -31,33 +31,34 @@
 # 							2414211
 
 class Country
-	def countryCode(ccode)
-		@ccode=ccode
-		puts "The Country code is #{@ccode}"
+	def countryCode
+		@ccode="00"
+		puts "The Country code is : #{@ccode}"
 	end
 end
-class City 
-	def cityCode(ctcode)
-		@ctcode=ctcode
-		puts "The City code#{@ctcode}"
+class City < Country
+	def cityCode
+		@ctcode=121
+		puts "The City code :#{@ctcode}"
 	end
 end
 class Pnumber < City
-	def phoneNumber(phnno)
-		cityCode(212)
-		@phnno=phnno
-		puts "The phone number is #{@phnno}"
+	def phoneNumber
+		@phnno=2414211
+		puts "The phone number is: #{@phnno}"
 	end
 end
-class Dnumber < Country
-	def dialNumber(dnum)
-		countryCode(000)
-		@dnum=dnum
-		puts "The dial number #{@dnum}"
+class Dnumber < Pnumber
+	def dialnumbe
+		 countryCode
+		 cityCode
+		 phoneNumber
+		puts " The dialnumber :#{@ccode}#{@ctcode}#{@phnno}"
 	end
 end
 d=Dnumber.new
-d.dialNumber(4414)
-p=Pnumber.new
-p.phoneNumber(2414211)
+p d.dialnumbe
+# p=Pnumber.new
+
+# p.phoneNumber(2414211)
 

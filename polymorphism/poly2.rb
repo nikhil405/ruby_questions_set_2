@@ -20,31 +20,32 @@
   # 4
   # I am car, I have 4
   #  wheels
-class Vehicle
 
-def wheel
-  @wheel
-end
-  
-end
-class Bike < Vehicle
-  def show
-  puts "enter number of wheels"
-  @wheel=gets.chomp
-  puts "I am bike, I have #{@wheel} wheels"
+class Vehilce
+  def bike_wheel
+    puts "Enter number of wheels:"
+    @a=Integer(gets)
+  end
+
+  def car_wheel
+    puts "Enter number of wheels:"
+    @b=Integer(gets)
   end
 end
-class Car < Vehicle
-  def put 
-    puts "Enter number of wheels"
-    @whell=gets.chomp
-    puts  "I am car, I have #{{@wheel}} wheels"
+class Bike < Vehilce
+  def bike_wheel
+    super
+    puts "I am bike, I have #{@a} wheels"
   end
 end
-# end
-#   class Car
-#   end
-b=Bike.new
-b.show
-c=Car.new
-c.put
+class Car < Vehilce
+  def car_wheel
+    super
+    puts "I am car, I have #{@b} wheels"
+  end
+end
+
+a=Bike.new
+a.bike_wheel
+b=Car.new
+b.car_wheel

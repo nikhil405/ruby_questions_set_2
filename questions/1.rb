@@ -14,4 +14,4 @@ p=[{:name => "Brad" , :age => 27 , :place => "xyz"} ,
  {:name => "John" , :age => 26 , :place => "xtz"} ,
  {:name => "Anil" , :age => 26 , :place => "xsz"}]
 # p p.inject([]) {|m,e| m[e] = p.index(e); m }
-p p.map(&:flatten).
+p p.map{|x| x.values}
