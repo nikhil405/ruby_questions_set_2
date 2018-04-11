@@ -3,25 +3,12 @@
 # Create a class called Grenade which should make a sound "BOOM"
 # Create a class called Sword
 # Instantiate objects and display the respective messages.
-# module Duck
+
 	
-# 	MAKE_SOUND = true
-# 	CAN_FLY = true
-
-# 	def Duck.can_make_sound(sound)
-# 		@sound = sound
-# 		puts "#{@sound}, Duck can make sound!"
-# 	end
-
-# 	def Duck.can_fly(fly)
-# 		@fly = fly
-# 		puts "#{@fly}, Duck can fly"
-# 	end
-
-# end
 module Explosive
 	def sound
 		puts "Boom"
+		puts "----------"
 	end
 end
 class Landmine

@@ -34,9 +34,9 @@ class Message
 
 	private
 	# The User should not access the secure Chat through its object--> this is confidentials
-	def secureChat(message)
-		puts "This is a secure Chat"
-		puts message
+	def secureChat
+		puts "client should not be able to call the secureChat "
+		
 	end
 
 	protected
@@ -54,7 +54,9 @@ class User < Message
 	end
 
 	def sendSecureMessage
-		secureChat("This is confidential")
+		# puts message1("")
+		secureChat
+		
 	end
 
 	def sendPersonalMessage
@@ -67,5 +69,5 @@ end
 client = User.new
 client.groupChat("hi friends")
 client.sendPersonalMessage
-# client.secureChate("g")
+ client.sendSecureMessage
 

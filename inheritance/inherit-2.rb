@@ -34,18 +34,21 @@ class Country
 	def countryCode
 		@ccode="00"
 		puts "The Country code is : #{@ccode}"
+		puts "*****************************"
 	end
 end
 class City < Country
 	def cityCode
 		@ctcode=121
 		puts "The City code :#{@ctcode}"
+		puts "*****************************"
 	end
 end
 class Pnumber < City
 	def phoneNumber
 		@phnno=2414211
 		puts "The phone number is: #{@phnno}"
+		puts "*******************************"
 	end
 end
 class Dnumber < Pnumber
@@ -54,11 +57,9 @@ class Dnumber < Pnumber
 		 cityCode
 		 phoneNumber
 		puts " The dialnumber :#{@ccode}#{@ctcode}#{@phnno}"
+		puts "*************************************************"
 	end
 end
 d=Dnumber.new
-p d.dialnumbe
-# p=Pnumber.new
-
-# p.phoneNumber(2414211)
+ d.dialnumbe
 
